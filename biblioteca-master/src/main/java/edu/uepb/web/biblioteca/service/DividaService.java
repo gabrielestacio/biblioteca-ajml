@@ -20,8 +20,8 @@ import edu.uepb.web.biblioteca.utils.BibliotecaDateTime;
  */
 @Service
 public class DividaService {
-	private static Logger logger = Logger.getLogger(DividaService.class);
-	private DividaDAOImpl dividaDAO;
+	private static /*@ spec_public @*/Logger logger = Logger.getLogger(DividaService.class);
+	private /*@ spec_public non_null @*/DividaDAOImpl dividaDAO;
 
 	/**
 	 * Retornar a lista das dividas que ainda nao pago no sistema

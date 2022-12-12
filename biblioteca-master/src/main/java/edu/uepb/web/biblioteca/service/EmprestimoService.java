@@ -27,14 +27,14 @@ import edu.uepb.web.biblioteca.utils.Email;
  */
 @Service
 public class EmprestimoService {
-	private static Logger logger = Logger.getLogger(EmprestimoService.class);
-	private FuncionarioDAOImpl funcionarioDAO;
-	private ItemDAOImpl itemDAO;
-	private AlunoDAOImpl alunoDAO;
-	private EmprestimoDAOImpl emprestimoDAO;
-	private ReservaDAOImpl reservaDAO;
-	private DividaDAOImpl dividaDAO;
-	private DividaService dividaService;
+	private static /*@ spec_public @*/Logger logger = Logger.getLogger(EmprestimoService.class);
+	private/*@ spec_public non_null @*/ FuncionarioDAOImpl funcionarioDAO;
+	private/*@ spec_public non_null @*/ ItemDAOImpl itemDAO;
+	private/*@ spec_public non_null @*/ AlunoDAOImpl alunoDAO;
+	private/*@ spec_public non_null @*/ EmprestimoDAOImpl emprestimoDAO;
+	private/*@ spec_public non_null @*/ ReservaDAOImpl reservaDAO;
+	private/*@ spec_public non_null @*/ DividaDAOImpl dividaDAO;
+	private/*@ spec_public non_null @*/ DividaService dividaService;
 
 	/**
 	 * O funcionario cadastrar um emprestimo que foi pedido pelo aluno

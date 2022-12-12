@@ -19,8 +19,8 @@ import edu.uepb.web.biblioteca.model.Item;
  */
 @Service
 public class ItemService {
-	private ItemDAOImpl itemDAO;
-	private static Logger logger = Logger.getLogger(ItemService.class);
+	private /*@ spec_public non_null @*/ItemDAOImpl itemDAO;
+	private static /*@ spec_public @*/Logger logger = Logger.getLogger(ItemService.class);
 
 	/**
 	 * Pegar o item pelo seu ID

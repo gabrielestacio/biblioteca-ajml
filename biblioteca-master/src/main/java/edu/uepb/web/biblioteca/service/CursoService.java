@@ -19,8 +19,8 @@ import edu.uepb.web.biblioteca.model.Funcionario;
  */
 @Service
 public class CursoService {
-	private static Logger logger = Logger.getLogger(CursoService.class);
-	private CursoDAOImpl cursoDAO;
+	private static/*@ spec_public @*/ Logger logger = Logger.getLogger(CursoService.class);
+	private /*@ spec_public non_null @*/CursoDAOImpl cursoDAO;
 
 	/**
 	 * Cadastra o curso. So o admin que pode realizar essa funcionalidade, retornar

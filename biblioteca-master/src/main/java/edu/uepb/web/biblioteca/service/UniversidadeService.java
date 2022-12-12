@@ -17,9 +17,9 @@ import edu.uepb.web.biblioteca.utils.Email;
  */
 @Service
 public class UniversidadeService {
-	private static Logger logger = Logger.getLogger(UniversidadeService.class);
-	private UniversidadeDAOImpl universidadeDAO;
-	private FuncionarioDAOImpl funcionarioDAO;
+	private static/*@ spec_public @*/ Logger logger = Logger.getLogger(UniversidadeService.class);
+	private/*@ spec_public non_null @*/ UniversidadeDAOImpl universidadeDAO;
+	private/*@ spec_public non_null @*/ FuncionarioDAOImpl funcionarioDAO;
 
 	/**
 	 * Cadastra universidade no sistema

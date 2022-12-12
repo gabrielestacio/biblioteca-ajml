@@ -24,12 +24,12 @@ import edu.uepb.web.biblioteca.utils.Email;
  */
 @Service
 public class ReservaService {
-	private static Logger logger = Logger.getLogger(Reserva.class);
-	private ReservaDAOImpl reservaDAO;
-	private AlunoDAOImpl alunoDAO;
-	private ItemDAOImpl itemDAO;
-	private DividaDAOImpl dividaDAO;
-	private EmprestimoDAOImpl emprestimoDAO;
+	private static /*@ spec_public @*/Logger logger = Logger.getLogger(Reserva.class);
+	private/*@ spec_public non_null @*/ ReservaDAOImpl reservaDAO;
+	private/*@ spec_public non_null @*/ AlunoDAOImpl alunoDAO;
+	private/*@ spec_public non_null @*/ ItemDAOImpl itemDAO;
+	private/*@ spec_public non_null @*/ DividaDAOImpl dividaDAO;
+	private/*@ spec_public non_null @*/ EmprestimoDAOImpl emprestimoDAO;
 
 	/**
 	 * Pegar a lista de todas as reservas cadastradas no sistema

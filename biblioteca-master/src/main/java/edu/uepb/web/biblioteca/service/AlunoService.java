@@ -25,12 +25,12 @@ import edu.uepb.web.biblioteca.model.Universidade;
  */
 @Service
 public class AlunoService {
-	private static Logger logger = Logger.getLogger(AlunoService.class);
-	private AlunoDAOImpl alunoDAO;
-	private DividaDAOImpl dividaDAO;
-	private EmprestimoDAOImpl emprestimoDAO;
-	private ReservaDAOImpl reservaDAO;
-	private UniversidadeDAOImpl universidadeDAO;
+	private static/*@ spec_public @*/ Logger logger = Logger.getLogger(AlunoService.class);
+	private/*@ spec_public non_null @*/ AlunoDAOImpl alunoDAO;
+	private/*@ spec_public non_null @*/ DividaDAOImpl dividaDAO;
+	private/*@ spec_public non_null @*/ EmprestimoDAOImpl emprestimoDAO;
+	private/*@ spec_public non_null @*/ ReservaDAOImpl reservaDAO;
+	private/*@ spec_public non_null @*/ UniversidadeDAOImpl universidadeDAO;
 
 	/**
 	 * Autenticar aluno
@@ -142,6 +142,10 @@ public class AlunoService {
 	 * @throws AutenticacaoException
 	 * @throws EmprestimoException
 	 */
+
+	 /*@
+	 @
+	 @*/
 	public void removerAluno(Funcionario funcionario, Aluno aluno) throws AutenticacaoException, EmprestimoException {
 		logger.info("Executa o metodo 'removerAluno' do alunoBusiness: " + funcionario + " e aluno: " + aluno);
 		if (!funcionario.getTipoFunc().equals(TipoFuncionario.ADMINISTRADOR)) {

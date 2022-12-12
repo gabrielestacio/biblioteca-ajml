@@ -16,8 +16,8 @@ import edu.uepb.web.biblioteca.model.Funcionario;
  */
 @Service
 public class FuncionarioService {
-	private static Logger logger = Logger.getLogger(FuncionarioService.class);
-	private FuncionarioDAOImpl funcionarioDAO;
+	private static /*@ spec_public @*/Logger logger = Logger.getLogger(FuncionarioService.class);
+	private /*@ spec_public non_null @*/FuncionarioDAOImpl funcionarioDAO;
 
 	/**
 	 * Autenticar o funcionario
